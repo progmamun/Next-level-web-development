@@ -1,0 +1,7 @@
+- nmv node installation
+- `npm install -g typescript` (tsc --v)
+- npm init -y
+- npm i -D nodemon
+- tsc init
+- `npm i ts-node-dev`
+- tsc (code compile)
