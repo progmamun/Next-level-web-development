@@ -42,7 +42,7 @@ let myString = "Hello, world!";
 
 - allows default value set last parameters
 
-```
+```typescript
 function adds(num1: number, num2: number = 20): number {
   return num1 + num2;
 }
@@ -50,3 +50,6 @@ function adds(num1: number, num2: number = 20): number {
 
 7. Type alias and optional types
 8. Union, Intersection and Enum Types
+9. Null, Unknown and Never Types
+
+- `npx ts-node-dev --respawn ./src/nullable-unknown-never.ts`
