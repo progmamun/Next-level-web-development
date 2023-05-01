@@ -5,6 +5,8 @@
 - tsc init
 - `npm i ts-node-dev`
 - tsc (code compile)
+- npm i ts-node-dev --save-dev
+- npx ts-node-dev --resawn src/function.ts
   ----===
 
 2. Primitive types in typescript
@@ -35,3 +37,13 @@ let myString = "Hello, world!";
 5. Functions in typescript
 
 - if return type is not, use `void`
+
+6. Spread, Rest, Default Parameters and Destructuring
+
+- allows default value set last parameters
+
+```
+function adds(num1: number, num2: number = 20): number {
+  return num1 + num2;
+}
+```
