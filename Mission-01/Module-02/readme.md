@@ -36,7 +36,7 @@ let myString = "Hello, world!";
 4. Object, Literal Types and Optional types
 5. Functions in typescript
 
-- if return type is not, use `void`
+- if function not return anything, use `void`
 
 6. Spread, Rest, Default Parameters and Destructuring
 
@@ -49,3 +49,4 @@ function adds(num1: number, num2: number = 20): number {
 ```
 
 7. Type alias and optional types
+8. Union, Intersection and Enum Types
