@@ -47,3 +47,5 @@ function adds(num1: number, num2: number = 20): number {
   return num1 + num2;
 }
 ```
+
+7. Type alias and optional types
