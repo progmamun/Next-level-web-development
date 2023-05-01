@@ -16,3 +16,7 @@ let myString: string = "Hello, world!";
 ```
 let myString = "Hello, world!";
 ```
+---
+3. Array and tuples in typescript
+- array reference type
+- tuples that is special type of array.
