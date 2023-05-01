@@ -53,3 +53,5 @@ function adds(num1: number, num2: number = 20): number {
 9. Null, Unknown and Never Types
 
 - `npx ts-node-dev --respawn ./src/nullable-unknown-never.ts`
+10. Ternary Operator, Nullish coalescing Operator
+- Nullish coalescing use 2 question (??), only work `null and undefined`
