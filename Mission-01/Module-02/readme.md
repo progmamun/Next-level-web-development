@@ -55,3 +55,17 @@ function adds(num1: number, num2: number = 20): number {
 - `npx ts-node-dev --respawn ./src/nullable-unknown-never.ts`
 10. Ternary Operator, Nullish coalescing Operator
 - Nullish coalescing use 2 question (??), only work `null and undefined`
+---
+### Quiz:
+1. What is typeScript?
+ans: A superset of JavaScript.
+2.  What type of assignment is this variable, `const course: string = 'Next Level Dev';`?
+ans: Explicit
+3. What is the difference between “any” and “unknown” in TypeScript?
+ans: Any is a type that can be assigned any value, while unknown is a type that can only be assigned a value after a runtime check.
+6. What is the difference between an array and a tuple in TypeScript?
+ans: An array can have a variable number of elements, while a tuple has a fixed number of elements.
+9. What is a default parameter in TypeScript?
+ans: A parameter that has a default value assigned to it in the function declaration.
+10. How do you define an alias for a type in TypeScript?
+ans: Using the type keyword
