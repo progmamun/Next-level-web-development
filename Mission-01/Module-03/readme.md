@@ -3,3 +3,4 @@
 -  Primitive type data cannot customize with interface. Interface only for Object type(Object, function, array) variable.
 3. Introduction of Generic in Type
 4. Generic in Interface.
+5. Generic in Function.
