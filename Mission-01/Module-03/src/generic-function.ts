@@ -19,9 +19,14 @@ const addMyCareer = <T>(myInfo: T) => {
     const newData = {...myInfo, old};
     return newData;
 }
-const myInfo = {
+
+type MyInfoType = {
+    name: string;
+    speciality: string;
+}
+const myInfo: MyInfoType = {
     name: "T3 Developer",
     speciality: "Cloud Engineer"
 }
 
-const spreedData = addMyCareer(myInfo);
+const spreedData = addMyCareer<MyInfoType>(myInfo);
