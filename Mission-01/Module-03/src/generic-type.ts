@@ -9,9 +9,10 @@ type GenericTuple<x, y> = [x, y];
 const myData: GenericTuple<string, string> = ["Al Mamun", "Programmer"]
 /////
 
-type RelationWithSalaryType = {name: string, salary: number};
+// type RelationWithSalaryType = {name: string, salary: number};
+interface RelationWithSalaryI {name: string, salary: number};
 
-const relationSalary: GenericTuple<RelationWithSalaryType, string> = [{
+const relationSalary: GenericTuple<RelationWithSalaryI, string> = [{
     name: "Al Mamun",
     salary: 100000,
 }, "Programmer"];
