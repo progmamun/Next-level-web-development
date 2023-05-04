@@ -10,6 +10,7 @@
 8. Asynchronous TypeScript.
 9. conditional Types.
 - union থেকে যে value টা never করা হয়, সেই value রিমুভ হয়ে যায়।
+10. Mapped Types.
 
 ---
 ### Quiz:
