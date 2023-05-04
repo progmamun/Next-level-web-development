@@ -7,7 +7,7 @@
 6. Constraints in Generics.
 7. Generic Constraints Using Key of part 1
 - Union হিসেবে না নিয়ে, `keyof` নিয়ে একই কাজটি করা সম্ভব।
-
+8. Asynchronous TypeScript.
 
 ---
 ### Quiz:
