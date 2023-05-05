@@ -16,3 +16,7 @@
 10. Encapsulation
 ---
 ### Quiz:
+9. What is the purpose of using inheritance in OOP?
+ans: To reduce the amount of code needed to create similar classes.
+10. What is polymorphism in OOP?
+ans: The ability of a class to take on multiple forms or behaviors.
