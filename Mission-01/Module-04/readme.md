@@ -11,3 +11,8 @@
 7. Static in Class
 8. Polymorphism
 - স্থান কাল পাত্র ভেদে, বিভিন্ন রুপ ধারণ করে।
+9. Abstraction.
+- cannot create instance, can create extends
+10. Encapsulation
+---
+### Quiz:
