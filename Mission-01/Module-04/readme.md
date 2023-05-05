@@ -1,3 +1,5 @@
+- `npx ts-node-dev --respawn ./src/static.ts`
+
 1. Introduction To Object Oriented Programming.
 2. How to Create Class, Object, Parameter Properties.
 - public properties parameter.
@@ -7,3 +9,5 @@
 6. Getters and Setters in TypeScript.
 - value access or set করা যায়,
 7. Static in Class
+8. Polymorphism
+- স্থান কাল পাত্র ভেদে, বিভিন্ন রুপ ধারণ করে।
