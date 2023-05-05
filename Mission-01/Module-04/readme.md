@@ -3,3 +3,4 @@
 - public properties parameter.
 3. Inheritence
 4. Type Guards / Type Narrowing.
+5. Access Modifiers: Public, private, Protected.
