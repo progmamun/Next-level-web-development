@@ -6,3 +6,4 @@
 5. Access Modifiers: Public, private, Protected.
 6. Getters and Setters in TypeScript.
 - value access or set করা যায়,
+7. Static in Class
