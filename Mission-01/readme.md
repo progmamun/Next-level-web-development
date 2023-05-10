@@ -3,4 +3,6 @@
 ### Module 2: Explore Basic Types of Typescript
 
 ### Module 3: Explore Advance Types of TypeScript
+
+### Module 4: Object-Oriented Programming in TypeScript
 ---

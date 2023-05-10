@@ -14,3 +14,8 @@
 
 ---
 ### Quiz:
+2. How is an interface different from a type alias in TypeScript?
+ans: An interface is an object type, while a type alias can be any type.
+3. What is a generic interface in TypeScript?
+ans: An interface that can be used with multiple different types.
+4.  
