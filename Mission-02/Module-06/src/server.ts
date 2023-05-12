@@ -1,9 +1,7 @@
-const express = require('express');
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
+import app from "./app";
 
-
-const app = express();
-const port = 5000;
+const port: number = 5000;
 
 // database connection 
 async function bootstrap() {
@@ -16,10 +14,7 @@ async function bootstrap() {
 }
 bootstrap();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
 
 app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`)
+    console.log(`Server is listening on port ${port}`)
 });
