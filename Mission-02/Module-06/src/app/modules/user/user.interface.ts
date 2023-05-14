@@ -1,3 +1,5 @@
+
+
 export interface IUser {
     id: string;
     role: "student";
@@ -9,4 +11,8 @@ export interface IUser {
     };
     dateOfBirth?: number;
     gender: "male"|"female";
+  }
+  
+ export interface IUserMethods {
+    fullName(): string;
   }
