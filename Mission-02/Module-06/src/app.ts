@@ -1,9 +1,10 @@
-import express, { Application, NextFunction, Request, Response, urlencoded } from "express";
+import express, { Application } from "express";
 import cors from "cors";
-import { Schema } from "mongoose";
-import { model } from "mongoose";
 
 const app: Application = express();
+
+// application routes 
+import userRoutes from './app/modules/user/user.route';
 
 // using cors 
 app.use(cors());
@@ -12,54 +13,7 @@ app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.get('/', (req: Request, res: Response, next: NextFunction) => {
-    // insert a test data 
-    // create an interface 
-    interface IUser {
-      id: string;
-      role: "student";
-      password: string;
-      name: {
-        firstName: string;
-        middleName?: string;
-        lastName: string;
-      };
-      dateOfBirth?: number;
-      gender: "male"|"female";
-    }
-    // creating schema using interface 
-    const userSchema = new Schema <IUser> ({
-      id: {type: String, required: true, unique: true},
-      role: {type: String, required: true},
-      password: {type: String, required: true},
-      name: {
-        firstName: {type: String, required: true},
-        middleName: {type: String,},
-        lastName: {type: String, required: true},
-      },
-      dateOfBirth: {type: Number},
-      gender: {type: String, enum: ["male", "female"]}
-    });
-    
-    // create model
-    const User = model<IUser>("User", userSchema );
-    
-    const createUserToDb = async () => {
-      const user = new User({
-        id: '789',
-        role: "student",
-        password: 'adminUser',
-        name: {
-          firstName: "Al Mamun",
-          lastName: "Khan",
-        },
-        gender: "male"
-      })
-      await user.save();
-    };
-    
-    createUserToDb();
-});
+app.use('/api/v1/user', userRoutes);
     
     
 export default app;
