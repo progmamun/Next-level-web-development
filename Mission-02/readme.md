@@ -1,3 +1,7 @@
+# Module-06: Installation and Explore Read and Write Queries
+# Module 7: Explore Mongoose More Queries.
+
+---
 # MongoDB Cheat Sheet
 
 ## Show All Databases
