@@ -73,3 +73,17 @@
 
 - `db.practice.find({friends: {$type: 'array'}})`
 - `db.practice.find({skills: {$size: 0}})`
+
+###
+
+- `db.practice.find({'interests.0': 'Travelling'}).project({interests: 1})`
+
+### all
+
+- `db.practice.find({interests: {$all : ['Travelling', 'Cooking', 'Reading']}}).project({interests: 1})`
+
+### elemMatch
+
+- `db.practice.find({
+    skills: {$elemMatch: {name: "JAVA", level: "Intermidiate"}}
+}).project({skills: 1})`
