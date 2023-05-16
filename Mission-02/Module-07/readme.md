@@ -162,6 +162,20 @@
   )
   ```
 
-```
+### deleteOne
 
-```
+- `db.practice.deleteOne(
+    { _id: ObjectId("6406ad65fc13ae5a400000c7") }
+)`
+
+### createCollection
+
+- `db.createCollection("test")`
+
+### insertOne
+
+- `db.test.insertOne({name: "AL Mamun Khan"})`
+
+### drop
+
+- `db.test.drop()`
