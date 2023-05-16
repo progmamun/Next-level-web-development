@@ -118,6 +118,50 @@
   )
   ```
 
+### unset remove one filed
+
+- ```
+  db.practice.updateOne(
+      { _id: ObjectId("6406ad65fc13ae5a400000c6") },
+      {
+          $unset: {occupation: 1 }
+      }
+  )
+  ```
+
+### pop {1 remove last item, -1 remove 1st item}
+
+- ```
+  db.practice.updateOne(
+      { _id: ObjectId("6406ad65fc13ae5a400000c6") },
+      {
+         $pop: {languages: 1}
+      }
+  )
+  ```
+
+### The $pull operator removes from an existing array all instances of a value or values that match a specified condition.
+
+- ```
+  db.practice.updateOne(
+      { _id: ObjectId("6406ad65fc13ae5a400000c6") },
+      {
+         $pull: {friends: 'Mizanur Rahman'}
+      }
+  )
+  ```
+
+### pullAll remove multiple array value
+
+- ```
+  db.practice.updateOne(
+      { _id: ObjectId("6406ad65fc13ae5a400000c6") },
+      {
+         $pullAll: {friends: ["Abdur Rakib", "Tanmoy Parvez"]}
+      }
+  )
+  ```
+
 ```
 
 ```
