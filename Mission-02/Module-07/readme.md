@@ -179,3 +179,30 @@
 ### drop
 
 - `db.test.drop()`
+
+---
+
+### inc
+
+- `db.practice.updateOne({_id: ObjectId('6406ad65fc13ae5a400000c5')},
+    {$inc: {age: 1}}
+)`
+
+### updateMany
+
+- `db.practice.updateMany(
+    {},
+    {$rename: {'favoutiteColor': 'favouriteColor'}}
+)`
+
+### min
+
+- ```db.practice.updateMany(
+      {},
+      {
+          $min: {
+              minAge: 18
+          }
+      }
+  )
+  ```
