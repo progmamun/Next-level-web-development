@@ -87,3 +87,37 @@
 - `db.practice.find({
     skills: {$elemMatch: {name: "JAVA", level: "Intermidiate"}}
 }).project({skills: 1})`
+
+---
+
+## update methods
+
+### updateOne , $set
+
+- ```
+  db.practice.updateOne(
+      { _id: ObjectId("6406ad65fc13ae5a400000c6") },
+      {
+          $set: {
+              company: "Programming-hero"
+          }
+      }
+  )
+  ```
+
+### $addToSet(duplicate value not set), $each(added multiple value in array)
+
+- ```
+  db.practice.updateOne(
+      { _id: ObjectId("6406ad65fc13ae5a400000c6") },
+      {
+          $addToSet: {
+              interests: {$each: ['Gamming', "COC"]}
+          }
+      }
+  )
+  ```
+
+```
+
+```
