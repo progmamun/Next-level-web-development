@@ -64,3 +64,12 @@
       ]
   }).project({age: 1}).sort({age: 1})
   ```
+
+### exists
+
+- `db.practice.find({phone: {$exists: true}})`
+
+### type
+
+- `db.practice.find({friends: {$type: 'array'}})`
+- `db.practice.find({skills: {$size: 0}})`
