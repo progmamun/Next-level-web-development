@@ -14,3 +14,11 @@
   // stage 3
   {} -> pipeline
   ])
+
+### $match aggregation operator
+
+- `db.practice.aggregate([
+    // stage Match
+    {$match: {favouriteColor: 'Indigo', gender: 'Male'}},
+    {$project: {gender: 1, age: 1, favouriteColor: 1}}
+])`
