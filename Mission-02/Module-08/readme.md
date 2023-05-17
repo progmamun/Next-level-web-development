@@ -22,3 +22,21 @@
     {$match: {favouriteColor: 'Indigo', gender: 'Male'}},
     {$project: {gender: 1, age: 1, favouriteColor: 1}}
 ])`
+
+### $addFields
+
+- `db.practice.aggregate([
+    // add field stage 
+    {
+        $addFields: {
+            salary: {
+                $toInt: {
+                    $floor: {
+                        $multiply: [{$rand: {}}, 100]
+                    }
+                }
+            }
+        }
+    },
+    {$out: "salarywithpractice"}
+])`
