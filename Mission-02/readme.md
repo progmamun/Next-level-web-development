@@ -1,7 +1,11 @@
 # Module-06: Installation and Explore Read and Write Queries
+
 # Module 7: Explore Mongoose More Queries.
 
+# Module 8: MongoDB Aggregation Framework and indexing.
+
 ---
+
 # MongoDB Cheat Sheet
 
 ## Show All Databases
@@ -263,4 +267,3 @@ db.posts.find({ views: { $gte: 7 } })
 db.posts.find({ views: { $lt: 7 } })
 db.posts.find({ views: { $lte: 7 } })
 ```
-
