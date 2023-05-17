@@ -40,3 +40,35 @@
     },
     {$out: "salarywithpractice"}
 ])`
+
+- `db.practice.aggregate([
+    // add field stage 
+    {
+        $addFields: {
+            salary: {
+                $toInt: {
+                    $floor: {
+                        $multiply: [{$rand: {}}, 100]
+                    }
+                }
+            }
+        }
+    },
+    {$merge: "practice"}
+])`
+
+### $group
+
+-
+
+```db.practice.aggregate([
+ // group stage
+ {
+ $group: {
+           _id: {
+               age: "$age",
+ email: "$email"
+ }
+}}
+])
+```
