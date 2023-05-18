@@ -130,3 +130,22 @@ db.practice.aggregate([
    }
 ])
 ```
+
+### $unwind
+
+-
+
+```
+db.practice.aggregate([
+    {
+        // unwind stage
+        $unwind: "$friends"
+    },
+    {
+        $group: {
+            _id: "$friends",
+            count: { $sum: 1 }
+        },
+    }
+])
+```
