@@ -149,3 +149,31 @@ db.practice.aggregate([
     }
 ])
 ```
+
+### $facet
+
+-
+
+```
+db.practice.aggregate([
+    { $match: { _id: ObjectId("6406ad63fc13ae5a40000064") } },
+    {
+        $facet: {
+            // sub pipline
+            "friendsCount": [
+                // stage
+                { $project: { friendCount: { $size: "$friends" } } }
+            ],
+            // sub pipline
+            "interestsCount": [
+                // stage
+                { $project: { interestesCount: { $size: "$interests" } } }
+            ],
+            "skillsCount": [
+                // stage
+                {$project: {skillsCount: {$size: "$skills"}}}
+            ]
+        }
+    }
+])
+```
