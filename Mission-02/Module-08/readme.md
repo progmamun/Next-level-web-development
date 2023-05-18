@@ -72,3 +72,35 @@
 }}
 ])
 ```
+
+### accumulator, $sort, $limit
+
+-
+
+```db.practice.aggregate([
+  {$match: {age: {$gt: 18}}},
+  // group stage
+  {
+  $group: {
+            _id: "$salary",
+  persons: { $sum: 1 } // accumulator
+        }
+    },
+    {
+        // project stage
+        $project: {
+            _id: 0,
+            salary: "$\_id",
+  persons: 1,
+  }
+  },
+  {
+  // sort stage
+   $sort: 1
+  },
+  {
+  $limit: 3
+  }
+
+])
+```
