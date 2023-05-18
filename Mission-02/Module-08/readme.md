@@ -96,11 +96,37 @@
   },
   {
   // sort stage
-   $sort: 1
+   $sort: {salary: 1}
   },
   {
   $limit: 3
   }
 
+])
+```
+
+### accumulator operator using aggregation
+
+-
+
+```
+db.practice.aggregate([
+    // group stage
+   { $group: {
+       _id: null,
+       count: {$sum: "$salary"},
+       maxSalary: {$max: "$salary"},
+       minSalary: {$min: "$salary"},
+       avgSalary: {$avg: "$salary"}
+   }},
+   {
+       $project: {
+           count: 1,
+           maxSalary: 1,
+           minSalary: 1,
+           avgSalary: 1,
+           salaryRange: {$subtract: [ "$maxSalary", "$minSalary" ]}
+       }
+   }
 ])
 ```
