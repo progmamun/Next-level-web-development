@@ -177,3 +177,52 @@ db.practice.aggregate([
     }
 ])
 ```
+
+### $lookup
+
+-
+
+```
+db.practice.aggregate([
+    { $match: { email: "dladley0@washingtonpost.com" } },
+    {$lookup: {
+           from: "additionalInfo",
+           localField: "email",
+           foreignField: "userEmail",
+           as: "additionalInfo"
+         }}
+])
+```
+
+-
+
+```
+db.additionalInfo.updateOne({userEmail: "dladley0@washingtonpost.com"}, {
+    $unset: { userEmail: 1 }
+})
+```
+
+-
+
+```
+db.additionalInfo.updateOne({_id: ObjectId("6466eb489f2debd244779a9f")},
+    { $set: {userId: new ObjectId("6406ad63fc13ae5a40000064")}
+})
+```
+
+-
+
+```
+db.practice.aggregate([
+    // { $match: { _id: ObjectId("6406ad63fc13ae5a40000064") } },
+    { $match: { email: "dladley0@washingtonpost.com" } },
+    {$lookup: {
+           from: "additionalInfo",
+           localField: "_id",
+           foreignField: "userId",
+           as: "additionalInfo"
+         }}
+])
+```
+
+---
