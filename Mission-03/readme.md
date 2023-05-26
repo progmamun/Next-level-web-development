@@ -1,5 +1,9 @@
 # Be A NoSQL Backend Brainiac
 
+# Module 10: SDLC, Requirement Analysis and Project Setup
+
+---
+
 # Authentication service
 
 ### We are building a university management system where we have three types of roles such as Admin , Student , Faculty.
@@ -120,3 +124,54 @@
 - department
 - faculty
 - Designation
+
+---
+
+# API END POINTS:
+
+- **User**:
+
+  - users/create-student (POST)
+  - users/create-faculty (POST)
+  - users/create-admin (POST)
+  - users/my-profile (GET)
+  - users/:id (GET)
+  - users/:id (PATCH)
+  - user/:id (DELETE)
+  - users/:id/force-logged-out
+  - users?page=1&limit=10 (GET)
+  - users/:id/available-permissions?page=1&limit=10 (GET)
+  - users/:id/assigned-permissions?page=1&limit=10 (GET)
+  - users/:id/assign-permissions (POST)
+  - users/:id/remove-permissions (POST)
+
+- **Student**:
+
+  - students?page=1&limit=10 (GET)
+  - students/:id (GET)
+  - students/:id (PATCH)
+
+- **Faculty**:
+  - faculties?page=1&limit=10 (GET)
+  - faculties/:id (GET)
+  - faculties/:id (PATCH)
+- **Admin**:
+
+  - admins?page=1&limit=10 (GET)
+  - admins/:id (GET)
+  - admin/:id (PATCH)
+
+- **Permission**:
+
+  - permissions?page=1&limit=10 (GET)
+  - permissions (POST)
+  - permissions/:id (GET)
+  - permissions/:id (PATCH)
+  - permissions/:id (DELETE)
+
+- **Auth**:
+  - auth/login (POST)
+  - auth/refresh-token (POST)
+  - auth/change-password (POST)
+  - auth/forgot-password(POST)
+  - auth/reset-password (POST)
