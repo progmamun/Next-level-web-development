@@ -1,6 +1,8 @@
 # Be A NoSQL Backend Brainiac
 
-# Module 10: SDLC, Requirement Analysis and Project Setup
+## Module 10: SDLC, Requirement Analysis and Project Setup
+
+## Module 11: How to setup and organize your project professionally
 
 ---
 
